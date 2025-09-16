@@ -45,12 +45,12 @@ const NewsSectionComponent = () => {
             {newsData.map((news) => (
               <li
                 key={news.id}
-                className="flex flex-row items-start justify-between text-base md:text-2xl py-1 md:py-3 border-t border-dashed border-[#c5cecd] last:border-b"
+                className="flex flex-col md:flex-row items-start justify-between text-base md:text-2xl py-4 md:py-3 border-t border-dashed border-[#c5cecd] last:border-b"
               >
-                <p className="w-[120px] md:w-[160px] text-[#666666] px-4">
+                <p className="w-full md:w-[160px] text-[#666666] md:px-4">
                   {news.date}
                 </p>
-                <p className="w-[calc(100%-120px)] md:w-[calc(100%-160px)] cursor-pointer hover:underline text-[#333333] pr-4">
+                <p className="w-full md:w-[calc(100%-160px)] cursor-pointer hover:underline text-[#333333] md:pr-4">
                   {news.title}
                 </p>
               </li>

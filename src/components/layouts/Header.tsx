@@ -8,10 +8,10 @@ const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
   const navLinks = [
-    { href: "/company", label: "企業情報" },
-    { href: "/about", label: "BEAUTECHのしごと" },
-    { href: "/recruit", label: "採用情報" },
-    { href: "/contact", label: "お問い合わせ" },
+    { href: "/", label: "企業情報" },
+    { href: "/", label: "BEAUTECHのしごと" },
+    { href: "/", label: "採用情報" },
+    { href: "/", label: "お問い合わせ" },
   ];
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +25,11 @@ const Header = () => {
     <>
       <header
         className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-          scrolled ? "bg-white" : "bg-transparent"
+          scrolled ? "bg-white md:bg-transparent" : "bg-transparent"
         }`}
       >
         <div className="px-4 md:px-6 lg:px-16 xl:px-20">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center h-[60px] md:h-[100px]">
             <h1 className="w-[150px] md:w-[200px]">
               <Link href="/">
                 <Image
@@ -48,11 +48,11 @@ const Header = () => {
                 {navLinks.map((link, index) => (
                   <li
                     key={index}
-                    className="flex items-center justify-center bg-pinkBrand"
+                    className="flex items-center justify-center bg-pinkBrand transform -skew-x-12"
                   >
                     <Link
                       href={link.href}
-                      className="px-5 py-2 text-base md:text-lg leading-none text-white"
+                      className="px-5 py-2 -mt-[2px] text-base md:text-lg leading-none text-white inline-block transform skew-x-12"
                     >
                       {link.label}
                     </Link>
@@ -68,7 +68,7 @@ const Header = () => {
                   aria-label="Close menu"
                   className="cursor-pointer ml-5"
                 >
-                  <X size={28} />
+                  <X size={28} color={"#f3547d"}/>
                 </button>
               ) : (
                 <button
@@ -76,7 +76,7 @@ const Header = () => {
                   aria-label="Open menu"
                   className="cursor-pointer ml-5"
                 >
-                  <Menu size={28} color={scrolled ? "white" : "black"} />
+                  <Menu size={28} color={"#f3547d"} />
                 </button>
               )}
             </div>
@@ -86,24 +86,24 @@ const Header = () => {
       {/* Backdrop */}
       {open && (
         <div
-          className="fixed top-[80px] inset-0 bg-black/40 z-40 md:hidden"
+          className="fixed top-[60px] inset-0 bg-black/40 z-40 md:hidden"
           onClick={() => setOpen(false)}
         />
       )}
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[80px] right-0 w-1/2 max-w-sm h-screen z-50 bg-white transition-transform duration-300 ease-in-out md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-[61px] right-0 w-[80%] h-screen z-50 bg-white transition-transform duration-300 ease-in-out md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex flex-col items-start gap-4 px-4 py-4 overflow-y-auto h-[calc(100vh-80px)]">
-          <ul className="flex flex-col space-x-5">
+        <div className="flex flex-col items-start gap-4 px-4 py-10 overflow-y-auto h-[calc(100vh-60px)]">
+          <ul className="flex flex-col space-y-5">
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col"
               >
                 <Link
                   href={link.href}
-                  className="px-5 py-2 text-base md:text-lg leading-none text-black"
+                  className="text-base md:text-lg leading-none text-black"
                 >
                   {link.label}
                 </Link>

@@ -104,6 +104,7 @@ const Header = () => {
                 <Link
                   href={link.href}
                   className="text-base md:text-lg leading-none text-black"
+                  onClick={() => setOpen(false)}
                 >
                   {link.label}
                 </Link>

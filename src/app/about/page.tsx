@@ -4,11 +4,22 @@ import MessageSectionComponent from '@/components/about/MessageSectionComponent'
 import HistorySectionComponent from '@/components/about/HistorySectionComponent';
 import CompanyProfileSectionComponent from '@/components/about/CompanyProfileSectionComponent';
 import AccessSectionComponent from '@/components/about/AccessSectionComponent';
+import Image from 'next/image';
+import Banner from '@/assets/img/about/about_banner.png';
+import SubBannerComponent from '@/components/common/SubBannerComponent';
+
 const AboutPage = () => {
   return (
-    <div className="w-full mt-[60px] md:mt-[100px]">
+    <div className="w-full mt-0 md:mt-[100px]">
       {/* MV */}
-      <div></div>
+      <SubBannerComponent
+        image={Banner}
+        title1="ABOUT"
+        title2="BEAUTECH"
+        highlightLetter="B"
+        subtitle="企業情報"
+        reverse={false}
+      />
       {/* Philosophy */}
       <PhilosophySectionComponent />
       {/* Message */}

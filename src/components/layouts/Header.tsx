@@ -8,7 +8,7 @@ const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
   const navLinks = [
-    { href: "/", label: "企業情報" },
+    { href: "/about", label: "企業情報" },
     { href: "/", label: "BEAUTECHのしごと" },
     { href: "/", label: "採用情報" },
     { href: "/", label: "お問い合わせ" },
@@ -52,7 +52,7 @@ const Header = () => {
                   >
                     <Link
                       href={link.href}
-                      className="px-5 py-2 -mt-[2px] text-base md:text-lg leading-none text-white inline-block transform skew-x-12"
+                      className="px-5 md:px-3 lg:px-5 py-2 -mt-[2px] md:text-[15px] lg:text-lg leading-none text-white inline-block transform skew-x-12"
                     >
                       {link.label}
                     </Link>
@@ -104,6 +104,7 @@ const Header = () => {
                 <Link
                   href={link.href}
                   className="text-base md:text-lg leading-none text-black"
+                  onClick={() => setOpen(false)}
                 >
                   {link.label}
                 </Link>

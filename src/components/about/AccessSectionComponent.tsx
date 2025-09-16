@@ -3,7 +3,8 @@ import React from 'react'
 import TitleEngJPComponent from '@/components/common/TitleEngJPComponent';
 const AccessSectionComponent = () => {
   return (
-    <div className="container py-16 md:py-32">
+    <div className="bg-[#dce5ea] py-16 md:py-32">
+      <div className="container mx-auto">
       <TitleEngJPComponent titleEn1="" titleJp="アクセス" className="mb-6 md:mb-10">
         <span className="text-pinkBrand">A</span>CCESS
       </TitleEngJPComponent>
@@ -22,9 +23,10 @@ const AccessSectionComponent = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div className="text-sm md:text-base leading-loose flex flex-row items-start mb-5 md:mb-8">
+      <div className="text-sm md:text-base leading-loose flex flex-row items-start mb-5 md:mb-8 mt-5 md:mt-0">
         <span>メトロ：</span>
         <p className='inline'>東日本橋駅 徒歩3分<br className="md:hidden" /><span className="hidden md:inline">、</span>馬喰横山駅 徒歩4分<br className="md:hidden" /><span className="hidden md:inline">、</span>馬喰町駅 徒歩6分<br className="md:hidden" /><span className="hidden md:inline">、</span>日比谷線 人形町駅 徒歩10分</p>
+      </div>
       </div>
     </div>
   )

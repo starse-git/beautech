@@ -52,7 +52,7 @@ const Header = () => {
                   >
                     <Link
                       href={link.href}
-                      className="px-5 py-2 -mt-[2px] text-base md:text-lg leading-none text-white inline-block transform skew-x-12"
+                      className="px-5 md:px-3 lg:px-5 py-2 -mt-[2px] md:text-[15px] lg:text-lg leading-none text-white inline-block transform skew-x-12"
                     >
                       {link.label}
                     </Link>

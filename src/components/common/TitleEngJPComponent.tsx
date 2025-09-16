@@ -3,10 +3,11 @@ interface TitleEngJPComponentProps {
     titleEn1?: string;
     titleJp?: string;
     children?: ReactNode;
+    className?: string; 
 }
-const TitleEngJPComponent = ({titleEn1, titleJp, children}: TitleEngJPComponentProps) => {
+const TitleEngJPComponent = ({titleEn1, titleJp, children, className}: TitleEngJPComponentProps) => {
   return (
-    <div className="flex flex-col items-start leading-[1] text-darkText">
+    <div className={`flex flex-col items-start leading-[1] text-darkText ${className ? className : ""}`}>
       {titleEn1 && (
         <p className="text-[45px] md:text-[60px] lg:text-[80px] tracking-wider">{titleEn1}</p>
       )}

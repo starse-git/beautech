@@ -4,7 +4,7 @@ import circleBg from '@/assets/img/about/circleBg.png';
 
 const PhilosophySectionComponent = () => {
   return (
-    <div className="container my-16 md:my-32">
+    <div className="container my-16 md:mb-32 md:mt-0">
       <TitleEngJPComponent titleEn1="" titleJp="企業理念" className="mb-6 md:mb-10">
         <span className="text-pinkBrand">P</span>HILOSOPHY
       </TitleEngJPComponent>

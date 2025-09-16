@@ -25,10 +25,10 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-[#3c3c3c] py-10 md:py-12">
-      <div className="container text-[#e5dece]">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-5">
-          <div>
-            <h4 className="font-normal text-lg md:text-xl mb-4">企業情報</h4>
+      <div className="container px-0 text-[#e5dece]">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-5">
+          <div className="w-full md:w-[20%] flex flex-row md:flex-col">
+            <h4 className="font-normal text-lg md:text-xl mb-4 w-[30%] md:w-full">企業情報</h4>
             <ul className="space-y-2 text-sm md:text-base list-disc list-inside marker:text-[0.5rem]">
               {listItems1.map((item, index) => (
                 <li key={index}>
@@ -38,8 +38,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-normal text-lg md:text-xl mb-4">事業内容</h4>
+          <div className="w-full md:w-[18%] flex flex-row md:flex-col">
+            <h4 className="font-normal text-lg md:text-xl mb-4 w-[30%] md:w-full">事業内容</h4>
             <ul className="space-y-2 text-sm md:text-base list-disc list-inside marker:text-[0.5rem]">
               {listItems2.map((item, index) => (
                 <li key={index}>
@@ -49,12 +49,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="hidden md:block">
-            <h4 className="font-normal text-lg md:text-xl mb-4">採用情報</h4>
+          <div className="w-full md:w-[17%]">
+            <h4 className="font-normal text-lg md:text-xl mb-0 md:mb-4">採用情報</h4>
           </div>
 
-          <div>
-            <h4 className="font-normal text-lg md:text-xl mb-4">問い合わせ</h4>
+          <div className="w-full md:w-[20%] flex flex-row md:flex-col">
+            <h4 className="font-normal text-lg md:text-xl mb-4 w-[30%] md:w-full">問い合わせ</h4>
             <ul className="space-y-2 text-sm md:text-base">
               {listItems3.map((item, index) => (
                 <li key={index}>
@@ -64,11 +64,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="block md:hidden">
-            <h4 className="font-normal text-lg md:text-xl mb-4">採用情報</h4>
-          </div>
-
-          <div className="col-span-2 md:col-span-1">
+          <div className="w-full md:w-[25%]">
             <h4 className="font-normal text-lg md:text-xl mb-4">
               労働派遣法に基づくマージン率
             </h4>
@@ -82,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center mt-5 md:mt-0">
+        <div className="flex flex-wrap justify-center items-center mt-10 md:mt-0">
           <Link href="/site-policy" className="text-xs md:text-sm hover:underline">サイトポリシー</Link>
           <span className="mx-4">|</span>
           <Link href="/privacy-policy" className="text-xs md:text-sm hover:underline">プライバシーポリシー</Link>

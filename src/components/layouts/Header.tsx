@@ -8,7 +8,7 @@ const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
   const navLinks = [
-    { href: "/", label: "企業情報" },
+    { href: "/about", label: "企業情報" },
     { href: "/", label: "BEAUTECHのしごと" },
     { href: "/", label: "採用情報" },
     { href: "/", label: "お問い合わせ" },

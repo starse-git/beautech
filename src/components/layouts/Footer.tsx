@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#3c3c3c] py-10 md:py-12">
       <div className="container text-[#e5dece]">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-5">
           <div>
             <h4 className="font-normal text-lg md:text-xl mb-4">企業情報</h4>
             <ul className="space-y-2 text-sm md:text-base list-disc list-inside marker:text-[0.5rem]">

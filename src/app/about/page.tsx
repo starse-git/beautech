@@ -1,22 +1,26 @@
 import React from 'react'
-
+import PhilosophySectionComponent from '@/components/about/PhilosophySectionComponent';
+import MessageSectionComponent from '@/components/about/MessageSectionComponent';
+import HistorySectionComponent from '@/components/about/HistorySectionComponent';
+import CompanyProfileSectionComponent from '@/components/about/CompanyProfileSectionComponent';
+import AccessSectionComponent from '@/components/about/AccessSectionComponent';
 const AboutPage = () => {
   return (
     <div className="w-full mt-[60px] md:mt-[100px]">
       {/* MV */}
       <div></div>
       {/* Philosophy */}
-      <div></div>
+      <PhilosophySectionComponent />
       {/* Message */}
-      <div></div>
+      <MessageSectionComponent />
       {/* History */}
-      <div></div>
+      <HistorySectionComponent />
       {/* Company */}
-      <div></div>
+      <CompanyProfileSectionComponent />
       {/* Access */}
-      <div></div>
+      <AccessSectionComponent />
     </div>
-  )
+  );
 }
 
 export default AboutPage;

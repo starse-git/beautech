@@ -30,6 +30,62 @@
     @apply mx-auto max-w-[1360px];
     @apply px-4 md:px-6 lg:px-8;
   }
+  .beforeBLeft {
+    @apply relative;
+    &::before {
+      @apply content-[''] absolute w-[32px] h-[32px] left-0 bottom-0 bg-no-repeat bg-contain bg-center -rotate-90;
+      background-image: var(--before-bg);
+    }
+  
+    /* AFTER pseudo */
+    &::after {
+      @apply content-[''] absolute w-[32px] h-[32px] right-0 bottom-0 bg-no-repeat bg-contain bg-center rotate-90;
+      background-image: var(--after-bg);
+    }
+  }
+  .TopbeforeLeft {
+    @apply relative;
+    &::before {
+      @apply content-[''] absolute w-[32px] h-[32px] left-0 top-0 bg-no-repeat bg-contain bg-center rotate-0;
+      background-image: var(--before-bg);
+    }
+  
+    /* AFTER pseudo */
+    &::after {
+      @apply content-[''] absolute w-[32px] h-[32px] right-0 top-0 bg-no-repeat bg-contain bg-center rotate-0;
+      background-image: var(--after-bg);
+    }
+  }
+  .titleText1{
+    @apply text-[24px] md:text-[30px] lg:text-[40px] font-normal tracking-wider
+    text-pinkBrand
+    bg-no-repeat;
+    background-image: var(--line-bg);
+    background-size: contain;
+    background-position: right;
+    @media (max-width: 767px) {
+      background-image: none;
+    }
+  }
+  .titleText2 {
+    @apply text-base md:text-xl lg:text-2xl font-medium
+    text-[#666]
+    tracking-wider
+    mb-4 md:mb-4;
+  }
+  .titleText3 {
+    @apply text-sm md:text-base lg:text-xl font-normal
+    text-darkText
+    tracking-wider;
+  }
+  .boxTitle {
+    @apply text-[18px] md:text-[30px] font-normal tracking-wider text-pinkBrand
+    mb-2 md:mb-4;
+  }
+  .boxText {
+    @apply text-[15px] md:text-[20px] font-normal tracking-wider text-darkText
+    leading-relaxed;
+  }
 }
 
 body {

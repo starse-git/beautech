@@ -4,7 +4,6 @@ import MessageSectionComponent from '@/components/about/MessageSectionComponent'
 import HistorySectionComponent from '@/components/about/HistorySectionComponent';
 import CompanyProfileSectionComponent from '@/components/about/CompanyProfileSectionComponent';
 import AccessSectionComponent from '@/components/about/AccessSectionComponent';
-import Image from 'next/image';
 import Banner from '@/assets/img/about/about_banner.png';
 import SubBannerComponent from '@/components/common/SubBannerComponent';
 

@@ -67,7 +67,7 @@ const AboutSectionComponent = () => {
             </p>
             <div className="max-w-[250px] md:max-w-[350px] mx-auto md:mx-0 mt-10 md:my-0">
               <ButtonComponent
-                href="#"
+                href="/business"
                 textColor="text-white"
                 bgGradient="bg-gradient-to-r from-pinkBrand to-purpleBrand"
                 arrowColor="bg-white"

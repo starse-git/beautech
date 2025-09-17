@@ -5,7 +5,7 @@ const CompanyProfileSectionComponent = () => {
   return (
     <div className="container my-16 md:my-32">
       <TitleEngJPComponent titleEn1="COMPANY" titleJp="会社概要" className="mb-6 md:mb-10">
-        <span className="text-pinkBrand">P</span>PROFILE
+        <span className="text-pinkBrand">P</span>ROFILE
       </TitleEngJPComponent>
       <div className="md:max-w-[520px] lg:max-w-[680px] mx-auto">
         <table className="min-w-full">

@@ -86,8 +86,14 @@
     @apply text-[15px] md:text-[20px] font-normal tracking-wider text-darkText
     leading-relaxed;
   }
+  /* Background White Box */
+  .bg-white-box {
+    @apply bg-white p-5 md:p-8 lg:p-10 shadow-[0_0_10px_0_rgba(0,0,0,0.1)];
+  }
 }
-
+@layer components {
+  
+}
 body {
   background: var(--background);
   color: var(--foreground);

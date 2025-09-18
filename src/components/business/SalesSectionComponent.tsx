@@ -4,7 +4,9 @@ import longImg02 from "@/assets/img/business/longImg02.png";
 import lineBg from "@/assets/img/business/lineBg.png";
 import TitleBorderComponent from "../common/TitleBorderComponent";
 import pImg03 from "@/assets/img/business/pImg03.png";
-import pImg02 from "@/assets/img/business/pImg02.png";
+import pImg04 from "@/assets/img/business/pImg04.png";
+import pImg05 from "@/assets/img/business/pImg05.png";
+import ButtonComponent from "../common/ButtonComponent";
 const SalesSectionComponent = () => {
   return (
     <div className="w-full">
@@ -59,106 +61,184 @@ const SalesSectionComponent = () => {
             </div>
             {/*  */}
             <div className="max-w-[1030px] md:ml-auto mt-10 md:mt-16 px-4 md:px-0">
-              <div className="w-full flex items-center justify-between mb-5 md:hidden">
-                <h1 className="w-[45%] text-lg tracking-wide text-left">
-                  <span className="inline-block text-pinkBrand bg-gradient-to-r from-orangeBrand via-pinkBrand to-[#7e62b7] bg-repeat-x bg-[position:-100%_105%] bg-[size:200%_6%]">
-                    代理店
-                    <br />
-                    ブランド事業
-                  </span>
-                </h1>
-                <div className="w-[55%] -mr-4">
-                  <Image
-                    src={pImg03}
-                    alt="画像"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full h-auto"
-                  />
+              <div className="md:mb-0 lg:mb-24">
+                <div className="w-full flex items-center justify-between mb-5 md:hidden">
+                  <h1 className="w-[40%] text-lg tracking-wide text-left">
+                    <span className="inline-block text-pinkBrand bg-gradient-to-r from-orangeBrand via-pinkBrand to-[#7e62b7] bg-repeat-x bg-[position:-100%_105%] bg-[size:200%_6%]">
+                      高級チャネル
+                    </span>
+                    <span className="block text-base font-medium leading-loose tracking-wider text-[#f3547d]">
+                      信頼と体験価値の提供
+                    </span>
+                  </h1>
+                  <div className="w-[55%] -mr-4">
+                    <Image
+                      src={pImg03}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+                <TitleBorderComponent
+                  text="高級チャネル"
+                  className="hidden md:block mb-0"
+                />
+                <p className="hidden md:block text-base md:text-xl font-medium leading-loose tracking-wider text-[#f3547d] mb-6 md:mb-10">
+                  信頼と体験価値の提供
+                </p>
+                <div className="relative pb-10 md:pb-0 lg:pb-12">
+                  <div className="hidden md:block absolute top:0 lg:bottom-0 right-0 w-[37%] h-full lg:flex lg:items-end">
+                    <Image
+                      src={pImg03}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="w-full md:w-[70%]">
+                    <h3 className="boxTitle">百貨店</h3>
+                    <p className="boxText">
+                      ブランドの格調と信頼性を高め、高価格帯商品の訴求に最適。
+                      <br />
+                      対面販売による専門的なアドバイスを通じて顧客満足度を高めます。
+                    </p>
+                    <h3 className="boxTitle mt-5 md:mt-8">ホテル</h3>
+                    <p className="boxText">
+                      リラックスや贅沢を楽しむ宿泊客層にアプローチ。
+                      <br />
+                      宿泊特典やスパメニューとの連携により、特別な体験価値を提供します。
+                    </p>
+                  </div>
                 </div>
               </div>
-              <TitleBorderComponent
-                text="代理店ブランド事業"
-                className="hidden md:block mb-10"
-              />
-              <p className="text-sm md:text-lg font-normal leading-loose mb-6 md:mb-10">
-                韓国発の先端バイオテクノロジーをいち早く導入し、世界的に評価の高いブランドを国内市場に提供。
-                <br />
-                自社開発だけでは得られない技術力と商品の新鮮さを確保し、最新のトレンドを取り入れラインアップを展開します。
-              </p>
-              <div className="relative pb-5 md:pb-12">
-                <div className="hidden md:block absolute top:0 lg:bottom-0 right-0 w-[37%] h-full lg:flex lg:items-end">
-                  <Image
-                    src={pImg03}
-                    alt="画像"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full h-auto"
-                  />
+              {/* 終了 高級チャネル */}
+
+              {/* 専門チャネル */}
+              <div>
+                <div className="w-full flex items-center justify-between mb-5 md:hidden">
+                  <h1 className="w-[45%] text-lg tracking-wide text-left order-2 md:order-1">
+                    <span className="inline-block text-pinkBrand bg-gradient-to-r from-orangeBrand via-pinkBrand to-[#7e62b7] bg-repeat-x bg-[position:-100%_103%] bg-[size:200%_6%]">
+                      専門チャネル
+                    </span>
+                    <span className="block text-base font-medium leading-loose tracking-wider text-[#f3547d]">
+                      効果実感と信頼構築
+                    </span>
+                  </h1>
+                  <div className="w-[55%] -ml-4">
+                    <Image
+                      src={pImg04}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
-                <div className="w-full md:w-[65%]">
-                  <h3 className="boxTitle">EXOMERE（エクソミア）</h3>
-                  <p className="boxText">
-                    韓国の植物幹細胞技術による、微細成分「エクソソーム」に着目。
-                    <br />
-                    肌への高い浸透効果と透明感やハリをサポートし、エイジングケアに特化した
-                    先端スキンケアブランドです。
-                  </p>
-                  <h3 className="boxTitle mt-5 md:mt-8">
-                    D.PL CELL（ディープルセル）
-                  </h3>
-                  <p className="boxText">
-                    韓国の皮膚科学研究所の技術を背景に持つブランド。
-                    <br />
-                    医学的アプローチに裏付けられた信頼性と効果に重点を置き、
-                    <br />
-                    エイジングケア市場での高付加価値なソリューションを提供します。
-                  </p>
-                </div>
-              </div>
-              {/* 自社ブランド事業 */}
-              <div className="flex items-center md:items-start gap-4 my-6 md:my-12 lg:my-20">
-                <div className="w-[50%] md:w-[35%] -ml-4 md:ml-0">
-                  <Image
-                    src={pImg02}
-                    alt="画像"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="w-[50%] md:w-[65%] mt-10">
-                  <TitleBorderComponent
-                    text="自社ブランド事業"
-                    className="mb-10"
-                  />
-                  <p className="hidden md:block boxText mb-6 md:mb-10">
-                    代理店事業で得た知見と市場データを活かし、植物幹細胞を核とした
-                    <br className="hidden lg:block" />
-                    自社ブランドの開発を推進。
-                    <br />
-                    コンセプト設計から価格設定、マーケティングまで一貫して自社でコントロールできる体制を強みとし、
-                    <br />
-                    独自のブランド価値を確立しています。
-                    <br />
-                    長期的なブランド資産を築き、収益性の向上を目指します。
-                  </p>
+                <div className="relative pb-12 md:py-16 lg:py-24">
+                  <div className="hidden md:block absolute top:0 lg:top-0 left-0 w-[37%] h-full lg:flex lg:items-start">
+                    <Image
+                      src={pImg04}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="w-full md:w-[60%] md:ml-auto">
+                    <TitleBorderComponent
+                      text="専門チャネル"
+                      className="hidden md:block mb-0"
+                    />
+                    <p className="hidden md:block text-base md:text-xl font-medium leading-loose tracking-wider text-[#f3547d] mb-6 md:mb-10">
+                      効果実感と信頼構築
+                    </p>
+                    <h3 className="boxTitle mt-5 md:mt-8">エステサロン</h3>
+                    <p className="boxText">
+                      <span className="text-lg">
+                        プロの施術と連動して商品の効果を体験できる場。
+                        <br />
+                        高い満足度に基づく信頼関係を築き、継続的な利用につながります。
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="md:hidden boxText mb-6">
-                代理店事業で得た知見と市場データを活かし、植物幹細胞を核とした
-                <br className="hidden lg:block" />
-                自社ブランドの開発を推進。
-                <br />
-                コンセプト設計から価格設定、マーケティングまで一貫して自社でコントロールできる体制を強みとし、
-                <br />
-                独自のブランド価値を確立しています。
-                <br />
-                長期的なブランド資産を築き、収益性の向上を目指します。
-              </p>
+              {/* 終了 専門チャネル */}
+
+              {/* 直接販売チャネル */}
+              <div>
+                <div className="w-full flex items-center justify-between mb-5 md:hidden">
+                  <h1 className="w-[45%] text-lg tracking-wide text-left">
+                    <span className="inline-block text-pinkBrand bg-gradient-to-r from-orangeBrand via-pinkBrand to-[#7e62b7] bg-repeat-x bg-[position:-100%_105%] bg-[size:200%_6%]">
+                      直接販売チャネル
+                    </span>
+                    <span className="-mr-16 block text-base font-medium leading-loose tracking-wider text-[#f3547d]">
+                      利便性と顧客データの活用
+                    </span>
+                  </h1>
+                  <div className="w-[55%] -mr-4">
+                    <Image
+                      src={pImg05}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+                <div className="relative pb-5 md:pb-0">
+                  <div className="hidden md:block absolute top:0 lg:bottom-10 right-0 w-[37%] h-full lg:flex lg:items-end">
+                    <Image
+                      src={pImg05}
+                      alt="画像"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="w-full md:w-[80%] relative z-[1]">
+                    <TitleBorderComponent
+                      text="直接販売チャネル"
+                      className="hidden md:block mb-0"
+                    />
+                    <p className="hidden md:block text-base md:text-xl font-medium leading-loose tracking-wider text-[#f3547d] mb-6 md:mb-10">
+                      利便性と顧客データの活用
+                    </p>
+                    <h3 className="boxTitle mt-5 md:mt-8">
+                      ECサイト・オンライン販売
+                    </h3>
+                    <p className="boxText mb-5 md:mb-10">
+                      <span className="text-lg">
+                        時間や場所を問わず広域の顧客にリーチが可能。
+                        <br />
+                        顧客データを直接取得できるため、リピーター育成やマーケティングの強化に活用できます。
+                        <br />
+                        特にサブスクリプションモデルとの親和性が高く、安定した収益基盤の構築につながります。
+                      </span>
+                    </p>
+                    <div className="max-w-[300px] md:max-w-[400px] mx-auto md:mx-0 mt-3 md:mt-6">
+                      <ButtonComponent
+                        href="/"
+                        textColor="text-white"
+                        bgGradient="bg-gradient-to-r from-pinkBrand to-purpleBrand"
+                        arrowColor="bg-white"
+                      >
+                        EC shop &quot;Star Shop&quot;
+                      </ButtonComponent>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* 終了 直接販売チャネル */}
             </div>
           </div>
         </div>

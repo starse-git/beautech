@@ -5,3 +5,7 @@ export interface News {
   date: string;
   isImportant: boolean;
 }
+export interface JobItem {
+  title: string;
+  desp: string;
+}

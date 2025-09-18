@@ -64,7 +64,7 @@ const SoftwareSectionComponent = () => {
             text="サービス内容"
             className="mb-8 md:mb-10 font-extrabold md:font-normal"
           />
-          <h3 className="boxTitle">Smail勤怠</h3>
+          <h3 className="boxTitle">Smile勤怠</h3>
           <p className="boxText">
             目的やご予算に合わせ、最適なオーダーメイド開発プランを提案します。
           </p>
@@ -75,7 +75,7 @@ const SoftwareSectionComponent = () => {
               bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
               arrowColor="bg-white"
             >
-              Smail勤怠について
+              Smile勤怠について
             </ButtonComponent>
           </div>
           <h3 className="boxTitle mt-8 md:mt-10">KIZUNA(絆)</h3>

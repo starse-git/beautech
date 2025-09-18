@@ -131,7 +131,7 @@ const CosmeticsScetion2Component = () => {
               </p>
             </div>
           </div>
-          <p className="md:hidden boxText mb-6">
+          <p className="md:hidden boxText mb-12 md:mb-6">
             代理店事業で得た知見と市場データを活かし、植物幹細胞を核とした<br className="hidden lg:block" />自社ブランドの開発を推進。<br />コンセプト設計から価格設定、マーケティングまで一貫して自社でコントロールできる体制を強みとし、<br />独自のブランド価値を確立しています。<br />長期的なブランド資産を築き、収益性の向上を目指します。
           </p>
         </div>

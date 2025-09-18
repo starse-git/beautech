@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   const listItems4 = [
-    { page: "情報セキュリティ", href: "/security" },
+    { page: "情報セキュリティ", href: "/informationsecurity" },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-[17%]">
-            <h4 className="font-normal text-lg md:text-xl mb-0 md:mb-4">採用情報</h4>
+            <h4 className="font-normal text-lg md:text-xl mb-0 md:mb-4"><Link href="/recruit">採用情報</Link></h4>
           </div>
 
           <div className="w-full md:w-[20%] flex flex-row md:flex-col">

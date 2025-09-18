@@ -1,5 +1,6 @@
 "use client";
 import TitleBorderComponent from '../common/TitleBorderComponent';
+import TitleEngJPComponent from '../common/TitleEngJPComponent';
 
 const InfoSection1Component = () => {
   const styleCss =`
@@ -30,19 +31,29 @@ const InfoSection1Component = () => {
     "代表取締役 西村 茂夫"
   ];
   return (
-    <div className="my-10 md:my-20">
+    <div className="my-20 md:my-40">
       <div className="container">
+        <TitleEngJPComponent
+          titleEn1=""
+          titleJp="個人情報保護方針"
+          className="mb-6 md:mb-10"
+        >
+          <span className="text-pinkBrand">I</span>NFORMATION
+        </TitleEngJPComponent>
         <div className="flex items-center justify-center mb-10 md:mb-16">
           <TitleBorderComponent text="個人情報保護方針" />
         </div>
         <div className="bg-white-box">
           <p className="leading-loose mb-6">
-          STAR TECH 株式会社は、社会の基盤となるITサービスを提供する企業として、個人情報保護の重要性を認識し、個人情報を適切に保護するための個人情報管理の仕組みを策定し、以下のように「個人情報保護方針」を定め、保護に努めます。
+            STAR TECH
+            株式会社は、社会の基盤となるITサービスを提供する企業として、個人情報保護の重要性を認識し、個人情報を適切に保護するための個人情報管理の仕組みを策定し、以下のように「個人情報保護方針」を定め、保護に努めます。
           </p>
           <style jsx>{styleCss}</style>
           <ol className="custom-list list-none">
             {listItems.map((item, index) => (
-              <li key={index} className="mb-6">{item}</li>
+              <li key={index} className="mb-6">
+                {item}
+              </li>
             ))}
           </ol>
           <div className="text-right">
@@ -55,7 +66,7 @@ const InfoSection1Component = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default InfoSection1Component;

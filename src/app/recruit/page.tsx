@@ -1,7 +1,7 @@
 import TitleBorderComponent from '@/components/common/TitleBorderComponent';
 import TitleEngJPComponent from '@/components/common/TitleEngJPComponent';
 import React from 'react'
-import { JobItem } from '@/types/news';
+import { JobItem } from '@/types/index';
 import ButtonComponent from '@/components/common/ButtonComponent';
 
 const RecruitPage = () => {
@@ -65,7 +65,7 @@ const RecruitPage = () => {
   ];
   return (
     <div className="w-full mt-0 md:mt-[100px]">
-      <div className="container">
+      <div className="container my-20 md:my-40">
         <TitleEngJPComponent
           titleEn1=""
           titleJp="採用情報"

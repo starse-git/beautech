@@ -19,7 +19,7 @@ const Footer = () => {
 
   const listItems3 = [
     { page: "法人のお客様", href: "/contact" },
-    { page: "個人のお客様", href: "/" },
+    { page: "個人のお客様", href: "/personalcontact" },
   ];
 
   const listItems4 = [

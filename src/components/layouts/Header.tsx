@@ -34,7 +34,7 @@ const Header = () => {
       label: "お問い合わせ",
       subNav: [
         { href: "/contact", label: "法人のお客様" },
-        { href: "/", label: "個人のお客様" },
+        { href: "/personalcontact", label: "個人のお客様" },
       ],
     },
   ];

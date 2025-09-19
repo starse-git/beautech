@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import React from 'react'
 import PhilosophySectionComponent from '@/components/about/PhilosophySectionComponent';
 import MessageSectionComponent from '@/components/about/MessageSectionComponent';

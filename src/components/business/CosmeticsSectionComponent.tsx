@@ -3,7 +3,7 @@ import TitleEngJPComponent from '@/components/common/TitleEngJPComponent';
 
 const CosmeticsSectionComponent = () => {
   return (
-    <div className="container my-16 md:mb-16 md:mt-0">
+    <div id="cosmetics" className="container my-16 md:mb-16 md:mt-0">
       <TitleEngJPComponent
         titleEn1="COSMETICS"
         titleJp="コスメ事業"

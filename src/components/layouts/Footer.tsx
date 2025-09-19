@@ -1,17 +1,20 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import SmoothScrollLink from "../common/SmoothScrollLink";
 
 const Footer = () => {
+
   const listItems1 = [
-    { page: "企業理念", href: "/company-philosophy" },
-    { page: "社長メッセージ", href: "/ceo-message" },
-    { page: "沿革", href: "/history" },
-    { page: "所在地（アクセス）", href: "/access" }
+    { page: "企業理念", href: "/about#companyPhilosophy" },
+    { page: "社長メッセージ", href: "/about#ceoMessage" },
+    { page: "沿革", href: "/about#history" },
+    { page: "所在地（アクセス）", href: "/about#access" }
   ];
 
   const listItems2 = [
-    { page: "コスメ事業", href: "/cosmetics" },
-    { page: "IT事業", href: "/it" },
+    { page: "コスメ事業", href: "/business#cosmetics" },
+    { page: "IT事業", href: "/business#it" },
   ];
 
   const listItems3 = [
@@ -32,7 +35,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm md:text-base list-disc list-inside marker:text-[0.5rem]">
               {listItems1.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="hover:underline">{item.page}</Link>
+                  <SmoothScrollLink href={item.href} className="hover:underline">{item.page}</SmoothScrollLink>
                 </li>
               ))}
             </ul>
@@ -43,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm md:text-base list-disc list-inside marker:text-[0.5rem]">
               {listItems2.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="hover:underline">{item.page}</Link>
+                  <SmoothScrollLink href={item.href} className="hover:underline">{item.page}</SmoothScrollLink>
                 </li>
               ))}
             </ul>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import PhilosophySectionComponent from '@/components/about/PhilosophySectionComponent';
 import MessageSectionComponent from '@/components/about/MessageSectionComponent';
@@ -6,8 +7,23 @@ import CompanyProfileSectionComponent from '@/components/about/CompanyProfileSec
 import AccessSectionComponent from '@/components/about/AccessSectionComponent';
 import Banner from '@/assets/img/about/about_banner.png';
 import SubBannerComponent from '@/components/common/SubBannerComponent';
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 const AboutPage = () => {
+  const searchParams = useSearchParams();
+  const { scrollToSection } = useSmoothScroll();
+  
+  useEffect(() => {
+    const targetId = searchParams.get("scrollTo");
+    if (targetId) {
+      setTimeout(() => {
+        scrollToSection(targetId);
+      }, 300);
+    }
+  }, [searchParams, scrollToSection]);
+
   return (
     <div className="w-full mt-0 md:mt-[100px]">
       {/* MV */}
@@ -20,13 +36,19 @@ const AboutPage = () => {
         reverse={false}
       />
       {/* Philosophy */}
-      <PhilosophySectionComponent />
+      <div id="companyPhilosophy">
+        <PhilosophySectionComponent />
+      </div>
       {/* Message */}
-      <MessageSectionComponent />
+      <div id="ceoMessage">
+        <MessageSectionComponent />
+      </div>
       {/* History */}
-      <HistorySectionComponent />
+      <div id="history">
+        <HistorySectionComponent />
+      </div>
       {/* Company */}
-      <CompanyProfileSectionComponent />
+        <CompanyProfileSectionComponent />
       {/* Access */}
       <AccessSectionComponent />
     </div>

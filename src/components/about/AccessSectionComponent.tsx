@@ -4,7 +4,7 @@ import TitleEngJPComponent from '@/components/common/TitleEngJPComponent';
 const AccessSectionComponent = () => {
   return (
     <div className="bg-[#dce5ea] py-16 md:py-32">
-      <div className="container mx-auto">
+      <div id="access" className="container mx-auto">
       <TitleEngJPComponent titleEn1="" titleJp="アクセス" className="mb-6 md:mb-10">
         <span className="text-pinkBrand">A</span>CCESS
       </TitleEngJPComponent>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import SubBannerComponent from '@/components/common/SubBannerComponent';
 import Banner from '@/assets/img/business/business_banner.png';
@@ -11,7 +12,22 @@ import SoftwareSectionComponent from '@/components/business/SoftwareSectionCompo
 import SolutionSectionComponent from '@/components/business/SolutionSectionComponent';
 import SalesSectionComponent from '@/components/business/SalesSectionComponent';
 
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
+
 const BusinessPage = () => {
+  const searchParams = useSearchParams();
+  const { scrollToSection } = useSmoothScroll();
+  
+  useEffect(() => {
+    const targetId = searchParams.get("scrollTo");
+    if (targetId) {
+      setTimeout(() => {
+        scrollToSection(targetId);
+      }, 300);
+    }
+  }, [searchParams, scrollToSection]);
   return (
     <div className="w-full mt-0 md:mt-[100px]">
       {/* MV */}

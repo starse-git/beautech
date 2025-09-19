@@ -7,7 +7,7 @@ import TitleEngJPComponent from "../common/TitleEngJPComponent";
 
 const SolutionSectionComponent = () => {
   return (
-    <div className="w-full bg-[#dbe5e9]">
+    <div id="it" className="w-full bg-[#dbe5e9]">
       <div className="container py-16 md:py-16">
         <TitleEngJPComponent
           titleEn1="IT SOLUTION"

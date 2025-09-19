@@ -2,15 +2,14 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { FormData } from '@/types/mail-form';
+import { FormData2 } from '@/types/mail-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import toast from 'react-hot-toast';
 import HandlingPersonalInfoComponent from '@/components/Contact/HandlingPersonalInfoComponent';
 import { z } from 'zod';
 
-const MailContentComponent = ({sendEmail}: {sendEmail: (formData: FormData) => Promise<{success: boolean, error: string | null}>}) => { 
+const MailContentComponent = ({sendEmail}: {sendEmail: (formData: FormData2) => Promise<{success: boolean, error: string | null}>}) => { 
   const mailFormSchema = z.object({
-    companyName: z.string().min(1, "会社名が必須です。"),
     yourName: z.string().min(1, "お名前が必須です。"),
     email: z.string().min(1, "メールアドレスが必須です。").email("メールアドレスが正しくありません。"),
     phone: z.string().min(1, "電話番号が必須です。"),
@@ -20,11 +19,11 @@ const MailContentComponent = ({sendEmail}: {sendEmail: (formData: FormData) => P
     address: z.string().optional(),
   });
 
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>({
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData2>({
     resolver: zodResolver(mailFormSchema),
   });
 
-  const onSubmit = async (formData: FormData) => {
+  const onSubmit = async (formData: FormData2) => {
     const result = await sendEmail(formData);
 
     if (result.success) {
@@ -55,25 +54,6 @@ const MailContentComponent = ({sendEmail}: {sendEmail: (formData: FormData) => P
         onSubmit={handleSubmit(onSubmit)}
         className="grid grid-cols-2 gap-4 space-y-2"
       >
-        {/* 会社名 */}
-        <div className="relative col-span-2 md:col-span-1">
-          <input
-            type="text"
-            id="companyName"
-            placeholder=""
-            className="peer block w-full border border-gray-300 rounded-md px-3 pt-5 pb-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            {...register("companyName")}
-          />
-          <label
-            htmlFor="companyName"
-            className="absolute left-3 top-2 text-black text-xs transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500"
-          >
-            会社名<span className="text-red-500">*</span>
-          </label>
-          {errors.companyName && (
-            <p className="text-red-500">{errors.companyName.message}</p>
-          )}
-        </div>
 
         {/* お名前 */}
         <div className="relative col-span-2 md:col-span-1">
@@ -170,7 +150,7 @@ const MailContentComponent = ({sendEmail}: {sendEmail: (formData: FormData) => P
         </div>
 
         {/* 件名 */}
-        <div className="relative col-span-2">
+        <div className="relative col-span-2 md:col-span-1">
           <input
             type="text"
             placeholder=""

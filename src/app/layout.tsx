@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_New,Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku",
@@ -40,6 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${zenKaku.variable} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

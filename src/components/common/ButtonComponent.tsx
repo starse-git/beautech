@@ -24,6 +24,7 @@ import React from 'react';
 
 interface ButtonProps {
   href: string;
+  target?: string;
   children: React.ReactNode;
   textColor?: string;
   bgGradient?: string;
@@ -33,6 +34,7 @@ interface ButtonProps {
 
 const ButtonComponent = ({
   href,
+  target,
   children,
   textColor = "text-white",
   bgGradient = "bg-gradient-to-r from-pink-500 to-purple-700",
@@ -42,6 +44,7 @@ const ButtonComponent = ({
   return (
     <Link
       href={href}
+      target={target}
       className={`inline-block w-full h-[50px] max-md:mx-auto ${bgGradient} ${textColor} font-bold text-sm md:text-base cursor-pointer transition-all duration-300 ${className}`}
     >
       <span className="relative flex items-center justify-center h-full px-10">

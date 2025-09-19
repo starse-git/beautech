@@ -31,7 +31,7 @@ const RecruitSectionComponent = () => {
           </p>
           <div className="max-w-[250px] md:max-w-[350px] mx-auto md:mx-0">
             <ButtonComponent
-              href="#"
+              href="/recruit"
               textColor="text-[#e5dece]"
               bgGradient="bg-[#636363]"
               arrowColor="bg-[#e5dece]"

@@ -4,7 +4,7 @@ import { useRouter, usePathname } from "next/navigation";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 interface SmoothScrollLinkProps {
-  href: string; // 例: "/about#history"
+  href: string; // "/about#history"
   children: React.ReactNode;
   className?: string;
 }

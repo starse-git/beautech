@@ -72,7 +72,8 @@ const ECSectionComponent = () => {
               </p>
               <div className="max-w-[300px] md:max-w-[400px] mx-auto md:mx-0 mt-3 md:mt-6">
                 <ButtonComponent
-                  href="/"
+                  href="https://star-shop.co/"
+                  target="_blank"
                   textColor="text-white"
                   bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
                   arrowColor="bg-white"

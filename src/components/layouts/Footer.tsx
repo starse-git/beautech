@@ -81,12 +81,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center mt-10 md:mt-0">
+        {/* <div className="flex flex-wrap justify-center items-center mt-10 md:mt-0">
           <Link href="/site-policy" className="text-xs md:text-sm hover:underline">サイトポリシー</Link>
           <span className="mx-4">|</span>
           <Link href="/privacy-policy" className="text-xs md:text-sm hover:underline">プライバシーポリシー</Link>
-        </div>
-        <div className="mt-3 text-xs md:text-sm text-center">
+        </div> */}
+        <div className="mt-10 text-xs md:text-sm text-center">
           Copyright &copy;2025 BEAUTECH株式会社. All rights reserved.
         </div>
       </div>

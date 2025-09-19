@@ -1,6 +1,5 @@
 "use client";
-export const dynamic = "force-dynamic";
-import React from 'react'
+import React, { useEffect } from "react";
 import SubBannerComponent from '@/components/common/SubBannerComponent';
 import Banner from '@/assets/img/business/business_banner.png';
 import CosmeticsSectionComponent from '@/components/business/CosmeticsSectionComponent';
@@ -14,13 +13,13 @@ import SolutionSectionComponent from '@/components/business/SolutionSectionCompo
 import SalesSectionComponent from '@/components/business/SalesSectionComponent';
 
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
+import SuspenseWrapper from "@/components/common/SuspenseWrapper";
 
-const BusinessPage = () => {
+const ScrollHandler: React.FC = () => {
   const searchParams = useSearchParams();
   const { scrollToSection } = useSmoothScroll();
-  
+
   useEffect(() => {
     const targetId = searchParams.get("scrollTo");
     if (targetId) {
@@ -29,7 +28,15 @@ const BusinessPage = () => {
       }, 300);
     }
   }, [searchParams, scrollToSection]);
+
+  return null;
+};
+
+const BusinessPage = () => {
+  
   return (
+    <SuspenseWrapper fallback={<div>Loading business page...</div>}>
+      <ScrollHandler />
     <div className="w-full mt-0 md:mt-[100px]">
       {/* MV */}
       <SubBannerComponent
@@ -60,6 +67,7 @@ const BusinessPage = () => {
       <ChirashiSection2Component />
       
     </div>
+    </SuspenseWrapper>
   )
 }
 

@@ -72,7 +72,6 @@ const SoftwareSectionComponent = () => {
             <ButtonComponent
               href="https://smile-kintai.jp/"
               target="_blank"
-              rel="noopener noreferrer"
               textColor="text-white"
               bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
               arrowColor="bg-white"
@@ -87,7 +86,8 @@ const SoftwareSectionComponent = () => {
           </p>
           <div className="max-w-[300px] md:max-w-[400px] mx-auto md:mx-0 mt-3 md:mt-6">
             <ButtonComponent
-              href="/"
+              href="https://www.kizuna-star.com/"
+              target="_blank"
               textColor="text-white"
               bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
               arrowColor="bg-white"
@@ -105,7 +105,6 @@ const SoftwareSectionComponent = () => {
             <ButtonComponent
               href="https://elearning-star.com/login"
               target="_blank"
-              rel="noopener noreferrer"
               textColor="text-white"
               bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
               arrowColor="bg-white"

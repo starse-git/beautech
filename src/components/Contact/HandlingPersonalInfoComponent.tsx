@@ -26,13 +26,13 @@ const HandlingPersonalInfoComponent = () => {
           <br />
           当社の個人情報保護管理者は以下の通りです。
           <br />
-          BEAU-TECH 株式会社
+          BEAUTECH 株式会社
           <br />
           個人情報保護管理者　副社長 松尾 大
           <br />
-          住所：〒104-0043　東京都中央区湊2-4-1　TOMACビル５階
+          住所：〒103-0004　東京都中央区東日本橋1丁目3-3　TYDビル 3F
           <br />
-          電話番号：03-5207-2955
+          電話番号：03-6661-2879
         </li>
         <li className="pl-5 -indent-5">
           委託について

@@ -58,7 +58,15 @@ const CompanyProfileSectionComponent = () => {
               <td className="px-0 md:px-4 py-3 align-top">加入保険</td>
               <td className="px-0 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">
-                損害保険 PL保険
+                  損害保険 PL保険
+                </p>
+              </td>
+            </tr>
+            <tr className="text-sm md:text-base lg:text-xl">
+              <td className="px-0 md:px-4 py-3 align-top">電話番号</td>
+              <td className="px-0 md:px-4 py-3">
+                <p className="leading-relaxed tracking-wider">
+                  03-6661-2879
                 </p>
               </td>
             </tr>

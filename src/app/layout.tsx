@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Beautech",
+  title: "BEAUTECH 株式会社", 
   description: "ビューテック株式会社",
   icons: {
     icon: "/favicon.ico",

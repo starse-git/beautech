@@ -27,7 +27,7 @@ const InfoSection1Component = () => {
   const listItems1 = [
     "制定日 2023年6月1日",
     "改訂日 2025年6月1日",
-    "BEAU-TECH 株式会社",
+    "BEAUTECH 株式会社",
     "代表取締役 西村 茂夫"
   ];
   return (
@@ -45,7 +45,7 @@ const InfoSection1Component = () => {
         </div>
         <div className="bg-white-box">
           <p className="leading-loose mb-6">
-            BEAU-TECH
+            BEAUTECH
             株式会社は、社会の基盤となるITサービスを提供する企業として、個人情報保護の重要性を認識し、個人情報を適切に保護するための個人情報管理の仕組みを策定し、以下のように「個人情報保護方針」を定め、保護に努めます。
           </p>
           <style jsx>{styleCss}</style>

@@ -59,7 +59,7 @@ const Header = () => {
               <Link href="/">
                 <Image
                   src={Logo}
-                  alt="Beautech"
+                  alt="BEAUTECH"
                   width={0}
                   height={0}
                   sizes="100vw"

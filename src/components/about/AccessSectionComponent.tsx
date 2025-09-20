@@ -10,7 +10,7 @@ const AccessSectionComponent = () => {
       </TitleEngJPComponent>
       <p className="text-sm md:text-base leading-loose flex flex-row items-start mb-5 md:mb-8">
         <span>所在地：</span>
-        <span>東京都中央区東日本橋1丁目3-3 <br className="md:hidden" />ＴＹＤビル 3F</span>
+        <span>東京都中央区東日本橋1丁目3-3 <br className="md:hidden" />TYDビル 3F</span>
       </p>
       <div className="w-full h-[285px] md:h-[570px] px-0 md:px-12 lg:px-16">
         <iframe

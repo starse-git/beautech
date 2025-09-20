@@ -67,7 +67,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full md:w-[25%]">
+
+          <div className="w-full md:w-[17%]">
+            <h4 className="font-normal text-lg md:text-xl mb-0 md:mb-4"><Link href="/informationsecurity">情報セキュリティ</Link></h4>
+          </div>
+
+          <div className="w-full md:w-[17%]">
+            <h4 className="font-normal text-lg md:text-xl mb-0 md:mb-4"><Link href="/marginrate">労働派遣法に基づくマージン率</Link></h4>
+          </div>
+
+          {/*<div className="w-full md:w-[25%]">
             <h4 className="font-normal text-lg md:text-xl mb-4">
               労働派遣法に基づくマージン率
             </h4>
@@ -78,7 +87,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div>*/}
         </div>
 
         {/* <div className="flex flex-wrap justify-center items-center mt-10 md:mt-0">

@@ -26,7 +26,7 @@ const HandlingPersonalInfoComponent = () => {
           <br />
           当社の個人情報保護管理者は以下の通りです。
           <br />
-          STAR TECH 株式会社
+          BEAU-TECH 株式会社
           <br />
           個人情報保護管理者　副社長 松尾 大
           <br />

@@ -44,7 +44,7 @@ export const sendEmail = async (formData: FormData) => {
             <p>内容：<strong>${formData.message}</strong></p>
             <p>------------------------------------------------------------</p>
             
-            <p>STAR TECH株式会社</p>
+            <p>BEAU-TECH株式会社</p>
             <p>〒104-0043 東京都中央区湊2-4-1 TOMACビル５階</p>
             <p>Email: ${process.env.MAIL_ADMIN_ADDRESS}</p>
             <p>TEL: 03-6661-2879</p>
@@ -70,7 +70,7 @@ export const sendEmail = async (formData: FormData) => {
         <body>
           <div class="container">
             <h2>${formData.yourName}様</h2>
-            <p>STAR TECH株式会社にお問い合わせいただき、ありがとうございます。</p>
+            <p>BEAU-TECH株式会社にお問い合わせいただき、ありがとうございます。</p>
             <p>問い合わせ内容は下記となります。</p>
             <p>------------------------------------------------------------</p>
             <p>お名前：<strong>${formData.yourName}</strong></p>
@@ -85,7 +85,7 @@ export const sendEmail = async (formData: FormData) => {
             <p>何かご不明な点がございましたら、お気軽にお問い合わせください。</p>
             <p>よろしくお願いいたします。</p>
             <p>------------------------------------------------------------</p>
-            <p>STAR TECH株式会社</p>
+            <p>BEAU-TECH株式会社</p>
             <p>Email: ${process.env.MAIL_ADMIN_ADDRESS}</p>
             <p>弊社の担当者からご連絡させていただくので少々お待ちくださいませ。</p>
             <p class="footer">※このメールはシステムから自動送信されています。</p>
@@ -159,7 +159,7 @@ export const sendEmail2 = async (formData: FormData2) => {
             <p>内容：<strong>${formData.message}</strong></p>
             <p>------------------------------------------------------------</p>
             
-            <p>STAR TECH株式会社</p>
+            <p>BEAU-TECH株式会社</p>
             <p>〒104-0043 東京都中央区湊2-4-1 TOMACビル５階</p>
             <p>Email: ${process.env.MAIL_ADMIN_ADDRESS}</p>
             <p>TEL: 03-6661-2879</p>
@@ -185,7 +185,7 @@ export const sendEmail2 = async (formData: FormData2) => {
         <body>
           <div class="container">
             <h2>${formData.yourName}様</h2>
-            <p>STAR TECH株式会社にお問い合わせいただき、ありがとうございます。</p>
+            <p>BEAU-TECH株式会社にお問い合わせいただき、ありがとうございます。</p>
             <p>問い合わせ内容は下記となります。</p>
             <p>------------------------------------------------------------</p>
             <p>お名前：<strong>${formData.yourName}</strong></p>
@@ -200,7 +200,7 @@ export const sendEmail2 = async (formData: FormData2) => {
             <p>何かご不明な点がございましたら、お気軽にお問い合わせください。</p>
             <p>よろしくお願いいたします。</p>
             <p>------------------------------------------------------------</p>
-            <p>STAR TECH株式会社</p>
+            <p>BEAU-TECH株式会社</p>
             <p>Email: ${process.env.MAIL_ADMIN_ADDRESS}</p>
             <p>弊社の担当者からご連絡させていただくので少々お待ちくださいませ。</p>
             <p class="footer">※このメールはシステムから自動送信されています。</p>

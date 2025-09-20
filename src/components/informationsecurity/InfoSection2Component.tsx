@@ -9,7 +9,7 @@ const InfoSection2Component = () => {
             個人情報に関する苦情・<br className="lg:hidden" />相談及び問い合わせ窓口
           </span>
         </h1>
-        <p className="leading-loose text-center mb-2">STAR TECH 株式会社</p>
+        <p className="leading-loose text-center mb-2">BEAU-TECH 株式会社</p>
         <p className="leading-loose text-center mb-2">苦情及び相談窓口</p>
         <p className="leading-loose text-center mb-2">〒104-0043 東京都中央区湊2-4-1 <br className='md:hidden' />TOMACビル５階</p>
         <p className="leading-loose text-center mb-2">TEL：03-6661-2879</p>

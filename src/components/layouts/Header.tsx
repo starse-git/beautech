@@ -28,15 +28,7 @@ const Header = () => {
         { href: "/business#it", label: "IT事業" },
       ],
     },
-    {
-      href: "/recruit",
-      label: "採用情報",
-      subNav: [
-        { href: "/", label: "事務・営業" },
-        { href: "/", label: "システムエンジニア" },
-        { href: "/", label: "インフラエンジニア" },
-      ],
-    },
+    { href: "/recruit", label: "採用情報", subNav: [] },
     {
       href: "/contact",
       label: "お問い合わせ",
@@ -101,16 +93,16 @@ const Header = () => {
                       link.subNav.length > 0 && (
                         <div
                           className={`absolute md:top-[31px] lg:top-[34px] z-50 block ${
-                            index >= navLinks.length - 2 ? "right-0" : "left-0"
+                            index === navLinks.length - 1 ? "right-0" : "left-0"
                           }`}
                         >
-                          <div className="min-w-[340px] bg-[#f2547d]/80 text-white rounded-md shadow-lg p-3 block mt-[20px]">
-                            <ul className="grid grid-cols-2 gap-1 list-disc list-inside marker:text-[0.5rem]">
+                          <div className="min-w-[340px] bg-[#f2547d]/80 text-white rounded-md shadow-lg p-4 block mt-[20px]">
+                            <ul className="grid grid-cols-2 gap-2 list-disc list-inside marker:text-[0.5rem]">
                               {link.subNav.map((sub, subIndex) => (
                                 <li key={subIndex}>
                                   <SmoothScrollLink
                                     href={sub.href}
-                                    className="inline hover:underline transform skew-x-12"
+                                    className="inline-block hover:underline transform skew-x-12"
                                   >
                                     {sub.label}
                                   </SmoothScrollLink>

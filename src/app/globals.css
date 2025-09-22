@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 @theme {
   --color-pinkBrand: #f3547d;
   --color-purpleBrand: #7663bc;
@@ -16,6 +19,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: #3281b2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,7 +40,7 @@
       @apply content-[''] absolute w-[32px] h-[32px] left-0 bottom-0 bg-no-repeat bg-contain bg-center -rotate-90;
       background-image: var(--before-bg);
     }
-  
+
     /* AFTER pseudo */
     &::after {
       @apply content-[''] absolute w-[32px] h-[32px] right-0 bottom-0 bg-no-repeat bg-contain bg-center rotate-90;
@@ -49,7 +53,7 @@
       @apply content-[''] absolute w-[32px] h-[32px] left-0 top-0 bg-no-repeat bg-contain bg-center rotate-0;
       background-image: var(--before-bg);
     }
-  
+
     /* AFTER pseudo */
     &::after {
       @apply content-[''] absolute w-[32px] h-[32px] right-0 top-0 bg-no-repeat bg-contain bg-center rotate-0;
@@ -91,11 +95,9 @@
     @apply bg-white p-5 md:p-8 lg:p-10 shadow-[0_0_10px_0_rgba(0,0,0,0.1)];
   }
 }
-@layer components {
-  
-}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-zen-kaku), Arial, Helvetica, sans-serif;
 }
+

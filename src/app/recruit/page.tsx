@@ -6,6 +6,7 @@ import ButtonComponent from '@/components/common/ButtonComponent';
 
 type JobCategory = {
   category: string;
+  href: string;
   jobs: JobItem[];
 };
 
@@ -13,6 +14,7 @@ const RecruitPage = () => {
   const jobCategories: JobCategory[] = [
     {
       category: "事務・営業",
+      href:"/recruit/officeForm",
       jobs: [
         { title: "職種",desp: "事務・営業",},
         { title: "仕事内容", desp: "資料作成などの事務業務全般をお任せします。基本的なPCスキル（Excel・Word）や、電話応対など一般的なビジネスマナーがあれば、はじめられる仕事です。書類チェックや電話・来客対応等のサポート業務を通して、会社を支えていただく仕事です。まずは簡単な業務からはじめ、徐々にステップアップ。未経験でもしっかりなくスートできます！",},
@@ -32,6 +34,7 @@ const RecruitPage = () => {
     },
     {
       category: "システムエンジニア",
+      href:"/recruit/systemEngineerForm",
       jobs: [
         { title: "職種", desp: "システムエンジニア" },
         { title: "仕事内容", desp: "システムの設計、お客様との打ち合わせ、コンサルティング、プログラミングなどの技術力も重要ですが、コミュニケーション能力はそれ以上に重要です。" },
@@ -51,6 +54,7 @@ const RecruitPage = () => {
     },
     {
       category: "インフラエンジニア",
+      href:"/recruit/infraEngineerForm",
       jobs: [
         { title: "職種", desp: "インフラエンジニア" },
         { title: "仕事内容", desp: "物理サーバ/仮想サーバ(ミドルウェア含む)、ストレージ、ネットワーク等のインフラ基盤の設計、構築および運用まで、 あなたのご経験やご希望に合ったインフラ基盤プロジェクトを用意しています。" },
@@ -100,7 +104,7 @@ const RecruitPage = () => {
               ))}
               <div className="max-w-[300px] md:max-w-[400px] mx-auto mt-6 md:mt-14">
                 <ButtonComponent
-                  href="/"
+                  href={category.href}
                   textColor="text-white"
                   bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
                   arrowColor="bg-white"

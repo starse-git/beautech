@@ -2,7 +2,7 @@
 import nodemailer from 'nodemailer';
 // import mailformSchema from '@/utils/validation/mail-form';
 import { getErrorMessage } from '@/utils/error';
-import { FormData, FormData2 } from '@/types/mail-form';
+import { FormData, FormData2, InfraFormData, SEFormData, OfficeFormData } from '@/types/mail-form';
 
 export const sendEmail = async (formData: FormData) => {
   try {
@@ -232,6 +232,314 @@ export const sendEmail2 = async (formData: FormData2) => {
     return { success: true, error: null };
   } catch (error) {
     console.error('Error sending email:', error);
+    return { success: false, error: getErrorMessage(error) };
+  }
+};
+export const sendSystemEngineerMail = async (formData: SEFormData) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
+
+    // Admin notification email
+    const adminMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: process.env.MAIL_ADMIN_ADDRESS,
+      subject: "新規応募",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+              table { width: 100%; border-collapse: collapse; }
+              th, td { border: 1px solid #ddd; padding: 8px; }
+              th { background-color: #f2f2f2; }
+            </style>
+          </head>
+          <body>
+            <h1>システムエンジニア応募フォーム</h1>
+            <div class="content">
+              <table>
+                <tr><th>項目</th><th>入力内容</th></tr>
+                <tr><td>姓</td><td>${formData.lastName}</td></tr>
+                <tr><td>名</td><td>${formData.firstName}</td></tr>
+                <tr><td>セイ</td><td>${formData.lastNameKana}</td></tr>
+                <tr><td>メイ</td><td>${formData.firstNameKana}</td></tr>
+                <tr><td>メールアドレス</td><td>${formData.email}</td></tr>
+                <tr><td>生年月日</td><td>${formData.birthDate}</td></tr>
+                <tr><td>電話番号</td><td>${formData.phone}</td></tr>
+                <tr><td>住所</td><td>${formData.address}</td></tr>
+                <tr><td>最小給与</td><td>${formData.salaryRange.min}</td></tr>
+                <tr><td>最大給与</td><td>${formData.salaryRange.max}</td></tr>
+                <tr><td>雇用形態</td><td>${formData.employmentType}</td></tr>
+                <tr><td>OS</td><td>${formData.os.join(', ')}</td></tr>
+                <tr><td>プログラミング言語</td><td>${formData.programmingLanguages.join(', ')}</td></tr>
+                <tr><td>データベース</td><td>${formData.databases.join(', ')}</td></tr>
+                <tr><td>備考</td><td>${formData.remarks}</td></tr>
+              </table>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // User confirmation email (Japanese "Thank you" email)
+    const userMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: formData.email,
+      subject: "応募完了のお知らせ",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+            </style>
+          </head>
+          <body>
+            <h1>ご応募いただきありがとうございます！</h1>
+            <div class="content">
+              <p>${formData.lastName} ${formData.firstName} 様</p>
+              <p>このたびは、当社のインフラ求人にご応募いただき、誠にありがとうございます。</p>
+              <p>ご入力いただいた情報を確認のうえ、担当者よりご連絡いたしますので、今しばらくお待ちください。</p>
+              <p>何かご不明な点がございましたら、お気軽にお問い合わせください。</p>
+              <p>よろしくお願いいたします。</p>
+            </div>
+            <div class="footer">
+              <p>BEAUTECH株式会社</p>
+              <p>Email: ${process.env.SMTP_USERNAME}</p>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(adminMailOptions),
+      transporter.sendMail(userMailOptions),
+    ]);
+
+    return { success: true, error: null };
+  } catch (error) {
+    return { success: false, error: getErrorMessage(error) };
+  }
+};
+
+export const sendOfficeMail = async (formData: OfficeFormData) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
+
+    // Admin notification email
+    const adminMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: process.env.MAIL_ADMIN_ADDRESS,
+      subject: "新規応募",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+              table { width: 100%; border-collapse: collapse; }
+              th, td { border: 1px solid #ddd; padding: 8px; }
+              th { background-color: #f2f2f2; }
+            </style>
+          </head>
+          <body>
+            <h1>オフィスワーカー応募フォーム</h1>
+            <div class="content">
+              <table>
+                <tr><th>項目</th><th>入力内容</th></tr>
+                <tr><td>姓</td><td>${formData.lastName}</td></tr>
+                <tr><td>名</td><td>${formData.firstName}</td></tr>
+                <tr><td>セイ</td><td>${formData.lastNameKana}</td></tr>
+                <tr><td>メイ</td><td>${formData.firstNameKana}</td></tr>
+                <tr><td>メールアドレス</td><td>${formData.email}</td></tr>
+                <tr><td>生年月日</td><td>${formData.birthDate}</td></tr>
+                <tr><td>電話番号</td><td>${formData.phone}</td></tr>
+                <tr><td>住所</td><td>${formData.address}</td></tr>
+                <tr><td>最小給与</td><td>${formData.salaryRange.min}</td></tr>
+                <tr><td>最大給与</td><td>${formData.salaryRange.max}</td></tr>
+                <tr><td>雇用形態</td><td>${formData.employmentType}</td></tr>
+                <tr><td>職種</td><td>${formData.occupation.join(', ')}</td></tr>
+                <tr><td>備考</td><td>${formData.remarks}</td></tr>
+              </table>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // User confirmation email (Japanese "Thank you" email)
+    const userMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: formData.email,
+      subject: "応募完了のお知らせ",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+            </style>
+          </head>
+          <body>
+            <h1>ご応募いただきありがとうございます！</h1>
+            <div class="content">
+              <p>${formData.lastName} ${formData.firstName} 様</p>
+              <p>このたびは、当社のインフラ求人にご応募いただき、誠にありがとうございます。</p>
+              <p>ご入力いただいた情報を確認のうえ、担当者よりご連絡いたしますので、今しばらくお待ちください。</p>
+              <p>何かご不明な点がございましたら、お気軽にお問い合わせください。</p>
+              <p>よろしくお願いいたします。</p>
+            </div>
+            <div class="footer">
+              <p>BEAUTECH株式会社</p>
+              <p>Email: ${process.env.SMTP_USERNAME}</p>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(adminMailOptions),
+      transporter.sendMail(userMailOptions),
+    ]);
+
+    return { success: true, error: null };
+  } catch (error) {
+    return { success: false, error: getErrorMessage(error) };
+  }
+};
+
+export const sendInfraMail = async (formData: InfraFormData) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
+
+    // Admin notification email
+    const adminMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: process.env.MAIL_ADMIN_ADDRESS,
+      subject: "新規応募",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+              table { width: 100%; border-collapse: collapse; }
+              th, td { border: 1px solid #ddd; padding: 8px; }
+              th { background-color: #f2f2f2; }
+            </style>
+          </head>
+          <body>
+            <h1>インフラ応募フォーム</h1>
+            <div class="content">
+              <table>
+                <tr><th>項目</th><th>入力内容</th></tr>
+                <tr><td>姓</td><td>${formData.lastName}</td></tr>
+                <tr><td>名</td><td>${formData.firstName}</td></tr>
+                <tr><td>セイ</td><td>${formData.lastNameKana}</td></tr>
+                <tr><td>メイ</td><td>${formData.firstNameKana}</td></tr>
+                <tr><td>メールアドレス</td><td>${formData.email}</td></tr>
+                <tr><td>生年月日</td><td>${formData.birthDate}</td></tr>
+                <tr><td>電話番号</td><td>${formData.phone}</td></tr>
+                <tr><td>住所</td><td>${formData.address}</td></tr>
+                <tr><td>最小給与</td><td>${formData.salaryRange.min}</td></tr>
+                <tr><td>最大給与</td><td>${formData.salaryRange.max}</td></tr>
+                <tr><td>雇用形態</td><td>${formData.employmentType}</td></tr>
+                <tr><td>OS</td><td>${formData.os.join(', ')}</td></tr>
+                <tr><td>インフラ</td><td>${formData.infra.join(', ')}</td></tr>
+                <tr><td>備考</td><td>${formData.remarks}</td></tr>
+              </table>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // User confirmation email (Japanese "Thank you" email)
+    const userMailOptions = {
+      from: process.env.SMTP_USERNAME,
+      to: formData.email,
+      subject: "応募完了のお知らせ",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="UTF-8" />
+            <style>
+              body { font-family: Arial, sans-serif; color: #333; }
+              h1 { color: #1a73e8; }
+              .content { margin-top: 20px; }
+              .footer { margin-top: 40px; font-size: 0.8em; color: #888; }
+            </style>
+          </head>
+          <body>
+            <h1>ご応募いただきありがとうございます！</h1>
+            <div class="content">
+              <p>${formData.lastName} ${formData.firstName} 様</p>
+              <p>このたびは、当社のインフラ求人にご応募いただき、誠にありがとうございます。</p>
+              <p>ご入力いただいた情報を確認のうえ、担当者よりご連絡いたしますので、今しばらくお待ちください。</p>
+              <p>何かご不明な点がございましたら、お気軽にお問い合わせください。</p>
+              <p>よろしくお願いいたします。</p>
+            </div>
+            <div class="footer">
+              <p>BEAUTECH株式会社</p>
+              <p>Email: ${process.env.SMTP_USERNAME}</p>
+            </div>
+          </body>
+        </html>
+      `,
+    };
+
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(adminMailOptions),
+      transporter.sendMail(userMailOptions),
+    ]);
+
+    return { success: true, error: null };
+  } catch (error) {
     return { success: false, error: getErrorMessage(error) };
   }
 };

@@ -15,31 +15,31 @@ const HistorySectionComponent = () => {
           <tbody>
             <tr className="text-sm md:text-base lg:text-xl">
               <td className="px-0 md:px-4 py-3 text-left align-top">2025/09</td>
-              <td className="px-0 md:px-4 py-3 text-left">
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">
-                  損害保険 PL保険加入
-                  <br />
                   ビューテック株式会社として<br className="md:hidden" />現所在地に移転
                   <br />
                   ホームページリニューアル
+                  <br />
+                  損害保険 PL保険加入
                 </p>
               </td>
             </tr>
             <tr className="text-sm md:text-base lg:text-xl">
               <td className="px-0 md:px-4 py-3 align-top">2024/01</td>
-              <td className="px-0 md:px-4 py-3">
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">西村 茂夫が代表取締役に就任</p>
               </td>
             </tr>
             <tr className="text-sm md:text-base lg:text-xl">
               <td className="px-0 md:px-4 py-3 align-top">2023/11</td>
-              <td className="px-0 md:px-4 py-3">
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">プライバシーマーク <br className="md:hidden" />第22000-459（01）号 を取得</p>
               </td>
             </tr>
             <tr className="text-sm md:text-base lg:text-xl">
               <td className="px-0 md:px-4 py-3 align-top">2023/10</td>
-              <td className="px-0 md:px-4 py-3">
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">
                   労働者派遣事業許可番号<br className="md:hidden" />（派13-316918）を取得
                   <br />
@@ -48,14 +48,22 @@ const HistorySectionComponent = () => {
               </td>
             </tr>
             <tr className="text-sm md:text-base lg:text-xl">
-              <td className="px-0 md:px-4 py-3 align-top">2024/07</td>
-              <td className="px-0 md:px-4 py-3">
+              <td className="px-0 md:px-4 py-3 align-top">2023/07</td>
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">松尾大が代表取締役に就任</p>
               </td>
             </tr>
             <tr className="text-sm md:text-base lg:text-xl">
+              <td className="px-0 md:px-4 py-3 align-top">2018/08</td>
+              <td className="px-2 md:px-4 py-3">
+                <p className="leading-relaxed tracking-wider">
+                  前身となる会社開設
+                </p>
+              </td>
+            </tr>
+            {/* <tr className="text-sm md:text-base lg:text-xl">
               <td className="px-0 md:px-4 py-3 align-top">2024/06</td>
-              <td className="px-0 md:px-4 py-3">
+              <td className="px-2 md:px-4 py-3">
                 <p className="leading-relaxed tracking-wider">
                   プライバシーマーク申請中<br />
                   ホームページリニュアル<br />
@@ -65,7 +73,7 @@ const HistorySectionComponent = () => {
                   前身となる会社開設
                 </p>
               </td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>

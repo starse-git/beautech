@@ -118,7 +118,7 @@ const InfraFormComponent = () => {
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：鈴木"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -138,7 +138,7 @@ const InfraFormComponent = () => {
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：太郎"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -160,7 +160,7 @@ const InfraFormComponent = () => {
                 name="lastNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：スズキ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -180,7 +180,7 @@ const InfraFormComponent = () => {
                 name="firstNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：タロウ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -204,7 +204,7 @@ const InfraFormComponent = () => {
               name="birthDate"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"生年月日"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -220,7 +220,7 @@ const InfraFormComponent = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"メール"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -243,7 +243,7 @@ const InfraFormComponent = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"電話番号"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -263,7 +263,7 @@ const InfraFormComponent = () => {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"住所"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -286,7 +286,7 @@ const InfraFormComponent = () => {
               name="salaryRange.min"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"最小給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -308,7 +308,7 @@ const InfraFormComponent = () => {
               name="salaryRange.max"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"最大給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -331,7 +331,7 @@ const InfraFormComponent = () => {
             name="employmentType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"希望の契約形態"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -385,7 +385,7 @@ const InfraFormComponent = () => {
             name="os"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"OS"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -434,7 +434,7 @@ const InfraFormComponent = () => {
             name="infra"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"インフラ分類"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -483,7 +483,7 @@ const InfraFormComponent = () => {
             name="remarks"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"備考"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>

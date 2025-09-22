@@ -144,7 +144,7 @@ const SEFormComponent = () => {
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：鈴木"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -164,7 +164,7 @@ const SEFormComponent = () => {
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：太郎"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -186,7 +186,7 @@ const SEFormComponent = () => {
                 name="lastNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：スズキ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -206,7 +206,7 @@ const SEFormComponent = () => {
                 name="firstNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：タロウ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -230,7 +230,7 @@ const SEFormComponent = () => {
               name="birthDate"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"生年月日"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -250,7 +250,7 @@ const SEFormComponent = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"メール"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -273,7 +273,7 @@ const SEFormComponent = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                   {"電話番号"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -293,7 +293,7 @@ const SEFormComponent = () => {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                   {"住所"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -316,7 +316,7 @@ const SEFormComponent = () => {
               name="salaryRange.min"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                   {"最小給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -338,7 +338,7 @@ const SEFormComponent = () => {
               name="salaryRange.max"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                   {"最大給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -361,7 +361,7 @@ const SEFormComponent = () => {
             name="employmentType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                 {"希望の契約形態"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -415,7 +415,7 @@ const SEFormComponent = () => {
             name="os"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                 {"OS"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -467,7 +467,7 @@ const SEFormComponent = () => {
             name="programmingLanguages"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"プログラミング言語"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -519,7 +519,7 @@ const SEFormComponent = () => {
             name="databases"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"DB"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -571,7 +571,7 @@ const SEFormComponent = () => {
             name="remarks"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"備考"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>

@@ -107,7 +107,7 @@ const OfficeFormComponent = () => {
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：鈴木"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -127,7 +127,7 @@ const OfficeFormComponent = () => {
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：太郎"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -149,7 +149,7 @@ const OfficeFormComponent = () => {
                 name="lastNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（姓）：スズキ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -169,7 +169,7 @@ const OfficeFormComponent = () => {
                 name="firstNameKana"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-sm font-normal">
+                    <FormLabel className="text-sm font-medium">
                       {"例（名）：タロウ"}
                       <span className="text-red-500 ml-1">*</span>
                     </FormLabel>
@@ -193,7 +193,7 @@ const OfficeFormComponent = () => {
               name="birthDate"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"生年月日"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -213,7 +213,7 @@ const OfficeFormComponent = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"メール"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -236,7 +236,7 @@ const OfficeFormComponent = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"電話番号"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -256,7 +256,7 @@ const OfficeFormComponent = () => {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"住所"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -281,7 +281,7 @@ const OfficeFormComponent = () => {
               name="salaryRange.min"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"最小給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -303,7 +303,7 @@ const OfficeFormComponent = () => {
               name="salaryRange.max"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-sm font-normal">
+                  <FormLabel className="text-sm font-medium">
                     {"最大給与（円）"}
                     <span className="text-red-500 ml-1">*</span>
                   </FormLabel>
@@ -326,7 +326,7 @@ const OfficeFormComponent = () => {
             name="employmentType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"希望の契約形態"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -380,7 +380,7 @@ const OfficeFormComponent = () => {
             name="occupation"
             render={() => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"職種"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>
@@ -432,7 +432,7 @@ const OfficeFormComponent = () => {
             name="remarks"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-normal">
+                <FormLabel className="text-sm font-medium">
                   {"備考"}
                   <span className="text-red-500 ml-1">*</span>
                 </FormLabel>

@@ -3,7 +3,7 @@ import React from "react";
 const PersonalInfoComponent = () => {
   return (
     <>
-      <h1 className="text-2xl font-bold text-gray-800 mb-4">
+      <h1 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
         個人情報の取扱いについて
       </h1>
       <p className="mb-4 text-sm">

@@ -1,8 +1,8 @@
 import React from 'react'
-import PublicLayout from '@/components/layouts/PublicLayout';
+import SubPageLayout from '@/components/layouts/SubPageLayout';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  return <PublicLayout>{children}</PublicLayout>;
+  return <SubPageLayout>{children}</SubPageLayout>;
 };
 
 export default layout;

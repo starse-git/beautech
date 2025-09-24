@@ -74,48 +74,46 @@ const RecruitPage = () => {
     }
   ];
   return (
-    <div className="w-full mt-0 md:mt-[100px]">
-      <div className="container my-20 md:my-40">
-        <TitleEngJPComponent
-          titleEn1=""
-          titleJp="採用情報"
-          className="mb-6 md:mb-10"
-        >
-          <span className="text-pinkBrand">R</span>ECRUIT
-        </TitleEngJPComponent>
+    <div className="container">
+      <TitleEngJPComponent
+        titleEn1=""
+        titleJp="採用情報"
+        className="mb-6 md:mb-10"
+      >
+        <span className="text-pinkBrand">R</span>ECRUIT
+      </TitleEngJPComponent>
 
-        {jobCategories.map((category, i) => (
-          <div key={i}>
-            {/* 職種タイトル */}
-            <div className="flex items-center justify-center mb-10 md:mb-16">
-              <TitleBorderComponent text={category.category} />
-            </div>
+      {jobCategories.map((category, i) => (
+        <div key={i}>
+          {/* 職種タイトル */}
+          <div className="flex items-center justify-center mb-10 md:mb-16">
+            <TitleBorderComponent text={category.category} />
+          </div>
 
-            <div className="bg-white-box my-10 md:my-16">
-              {category.jobs.map((item, idx) => (
-                <div key={idx} className="mt-6 md:mt-10 first:mt-0">
-                  <h3 className="text-lg md:text-xl font-bold border-b-2 border-gray-300 pb-2 mb-1">
-                    {item.title}
-                  </h3>
-                  <div className="text-sm md:text-base/loose">
-                    <p className="text-darkText leading-loose">{item.desp}</p>
-                  </div>
+          <div className="bg-white-box my-10 md:my-16">
+            {category.jobs.map((item, idx) => (
+              <div key={idx} className="mt-6 md:mt-10 first:mt-0">
+                <h3 className="text-lg md:text-xl font-bold border-b-2 border-gray-300 pb-2 mb-1">
+                  {item.title}
+                </h3>
+                <div className="text-sm md:text-base/loose">
+                  <p className="text-darkText leading-loose">{item.desp}</p>
                 </div>
-              ))}
-              <div className="max-w-[300px] md:max-w-[400px] mx-auto mt-6 md:mt-14">
-                <ButtonComponent
-                  href={category.href}
-                  textColor="text-white"
-                  bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
-                  arrowColor="bg-white"
-                >
-                  エントリ
-                </ButtonComponent>
               </div>
+            ))}
+            <div className="max-w-[300px] md:max-w-[400px] mx-auto mt-6 md:mt-14">
+              <ButtonComponent
+                href={category.href}
+                textColor="text-white"
+                bgGradient="bg-gradient-to-r from-orangeBrand to-purpleBrand"
+                arrowColor="bg-white"
+              >
+                エントリ
+              </ButtonComponent>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

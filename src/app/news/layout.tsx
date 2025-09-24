@@ -1,5 +1,5 @@
-import PublicLayouts from '@/components/layouts/PublicLayout';
+import SubPageLayout from '@/components/layouts/SubPageLayout';
 
 export default function NewsLayout({ children }: { children: React.ReactNode }) {
-  return <PublicLayouts>{children}</PublicLayouts>;
+  return <SubPageLayout>{children}</SubPageLayout>;
 }

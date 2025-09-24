@@ -5,7 +5,7 @@ import InfoSection3Component from '@/components/informationsecurity/InfoSection3
 
 const InformationSecurityPage = () => {
   return (
-    <div className="w-full mt-0 md:mt-[100px]">
+    <div>
       <InfoSection1Component />
       <InfoSection2Component />
       <InfoSection3Component />
